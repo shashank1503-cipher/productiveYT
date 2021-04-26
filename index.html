@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productive YT | Index</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
+    <style>
+        body
+        {
+           
+            background-image: url('start.jpg');
+  			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			overflow-x: hidden;
+        }
+        .head 
+        {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 30px;
+            text-align: center;
+            height:3rem;
+        }
+        ::selection
+        {
+            color: #121212;
+            background: #664AFF;
+        }
+        .search-box
+        {
+            float: left;
+            
+            position: fixed;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0  #FF0000;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        .search-box.active
+        {
+            width: 350px;
+        }
+        .search-box input
+        {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 50px;
+            background: #fff;
+            outline: none;
+            padding: 0 60px 0 20px;
+            font-size: 18px;
+            opacity: 0;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            color: #FF0000;
+        }
+        .search-box input.active
+        {
+            opacity: 1;
+        }
+        .search-box input::placeholder
+        {
+            color: #FF0000;
+        }
+        .search-box .search-icon
+        {
+            position: absolute;
+            right: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 60px;
+            width: 60px;
+            background: #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 60px;
+            font-size: 22px;
+            color: #FF0000;
+            cursor: pointer;
+            z-index: 1;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        .search-box .search-icon.active
+        {
+            right: 5px;
+            height: 50px;
+            line-height: 50px;
+            width: 50px;
+            font-size: 20px;
+            background: #FF0000;
+            color: #fff;
+            transform: translateY(-50%) rotate(360deg);
+        }
+        .search-box .cancel-icon
+        {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 25px;
+            color: #FF0000;
+            cursor: pointer;
+            transition: all 0.5s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+            .search-box .cancel-icon.active
+        {
+            right: -40px;
+            transform: translateY(-50%) rotate(360deg);
+        }
+        .search-box .search-data
+        {
+            text-align: center;
+            padding-top: 7px;
+            color: #FF0000;
+            font-size: 18px;
+            word-wrap: break-word;
+        }
+            .search-box .search-data.active
+        {
+            display: none;
+        }
+        .content
+        {
+            overflow: hidden;
+            
+            text-align: center;
+            height: auto;
+            margin-top:150px;
+            background-color: #fff;
+            letter-spacing: 0.01em;
+            color: #000;
+            width: 65%;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            
+        }
+        .content h3
+        {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            font-size: 25px;
+        }
+        .search 
+        {
+            padding: 20px;
+            margin-top: 100px;
+            margin-left: 400px;
+            height: 60px;
+            background-color: #fff;
+            width: 60px;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+            
+        }
+        .search.active
+        {
+            width: 450px;
+        }
+        @media only screen and (max-width: 768px)
+        {
+           .content,.head
+            {
+                
+                margin: none;
+                
+                width: 100%;
+
+            }
+            .search
+            {
+                align-content: center;
+                
+                margin-left: 0px;
+                width: 60px;
+            }
+            .search.active
+            {
+                width: 84%;
+            }
+            .search-box.active
+            {
+                width: 65%;
+            }
+            body
+            {
+                background-image: url('startMobile.jpg');
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="head"><h1>Productive <p style = "color:#FF0000;display: inline;">YT</h1></div>
+    <div class="content"><h3>To avoid <strong>distractions</strong> from YouTube Homepage search here to go to your required video on YT<br>Just type your query and you're good to go</h3></div>
+    
+        <div class="search">
+        <div class="search-box">
+            
+            <input type="text" placeholder="Search on YT here" name = "search" id = "search">
+            
+            <div class="search-icon">
+              <i class="fas fa-search"></i>
+            </div>
+        
+      <div class="cancel-icon">
+              <i class="fas fa-times"></i>
+            </div>
+      <div class="search-data">
+      </div>
+      </div>
+      </div>
+    
+    <script>
+        const searchBox = document.querySelector(".search-box");
+      const searchBtn = document.querySelector(".search-icon");
+      const cancelBtn = document.querySelector(".cancel-icon");
+      const searchInput = document.querySelector("input");
+      const searchData = document.querySelector(".search-data");
+      const searchDiv = document.querySelector(".search");
+      searchBtn.onclick =()=>{
+          
+        searchBox.classList.add("active");
+        searchBtn.classList.add("active");
+        searchInput.classList.add("active");
+        cancelBtn.classList.add("active");
+        searchDiv.classList.add("active");
+        searchInput.focus();
+        if(searchInput.value != ""){
+          search(searchInput.value);
+        }
+      }
+      cancelBtn.onclick =()=>{
+        searchBox.classList.remove("active");
+        searchBtn.classList.remove("active");
+        searchInput.classList.remove("active");
+        cancelBtn.classList.remove("active");
+        searchData.classList.toggle("active");
+        searchDiv.classList.remove("active");
+        searchInput.value = "";
+      }
+      function search(query) {
+          var arr = query.split(" ");
+          var newQuery = "";
+          for (let i = 0; i < arr.length; i++) {
+              const element = arr[i];
+              if (i == (arr.length -1)) {
+                  newQuery +=  arr[i];
+              } else {
+                  newQuery += arr[i] + "+";
+              }
+              
+              
+          }
+          var url = "https://www.youtube.com/results?search_query="
+          url += newQuery;
+          window.location.href = url;
+          searchInput.value = "";
+        
+      }
+    </script>
+</body>
+</html>
